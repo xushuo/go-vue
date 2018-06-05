@@ -6,11 +6,14 @@ import router from './router'
 import 'css/reset.css'
 import 'css/border.css'
 import 'css/iconfont.css'
+import 'swiper/dist/css/swiper.css'
+
 import fastclick from 'fastclick'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 Vue.config.productionTip = false
 fastclick.attach(document.body) //取消点击延迟
-
+Vue.use(VueAwesomeSwiper)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

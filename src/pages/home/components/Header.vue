@@ -12,7 +12,7 @@
 </template>
 <script>
   export default {
-    name : 'Home'
+    name : 'HomeHeader'
   }
 </script>
 <style scoped lang="scss">
