@@ -25,7 +25,7 @@
           {
             id : '1',
             imgURL : 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-            desc : '热门景点热门景点热门景点热门景点热门景点热门景点'
+            desc : '热门景点'
           }, {
             id : '2',
             imgURL : 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
@@ -81,7 +81,7 @@
     }
   }
 </script>
-<style scoped lang="scss">
+<style scoped lang="scss" type="text/scss">
   @import "~css/theme.scss";
   @import "~css/mixins.scss";
   .icon{
@@ -91,31 +91,31 @@
     height:0;
     padding-bottom:25%;
     overflow:hidden;
-  .icon-img{
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:.44rem;
-    box-sizing:border-box;
-    padding:.1rem;
-  .icon-img-content{
-    height:100%;
-    display:block;
-    margin:0 auto;
-  }
-  }
-  .icon-desc{
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    height:.44rem;
-    line-height:.44rem;
-    text-align:center;
-    color:$darkTexrColor;
-    @include ellipsis;
-  }
+    .icon-img{
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:.44rem;
+      box-sizing:border-box;
+      padding:.1rem;
+      .icon-img-content{
+        height:100%;
+        display:block;
+        margin:0 auto;
+      }
+    }
+    .icon-desc{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      height:.44rem;
+      line-height:.44rem;
+      text-align:center;
+      color:$darkTexrColor;
+      @include ellipsis;
+    }
   }
 </style>
 <style>
