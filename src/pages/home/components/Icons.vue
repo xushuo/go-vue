@@ -5,7 +5,7 @@
             <swiper-slide v-for="(page,index) of pages" :key="index">
                 <div class="icon" v-for="item of page" :key="item.id">
                     <div class="icon-img">
-                        <img class="icon-img-content" :src="item.imgURL" alt="">
+                        <img class="icon-img-content" :src="item.imgUrl" alt="">
                     </div>
                     <p class="icon-desc">{{item.desc}}</p>
                 </div>
@@ -18,52 +18,14 @@
 <script>
     export default {
         name : 'HomeIcons',
+        props : {
+            iconList : Array
+        },
         data(){
             return {
-                swiperOption : {},
-                iconList : [
-                    {
-                        id : '1',
-                        imgURL : 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                        desc : '热门景点'
-                    }, {
-                        id : '2',
-                        imgURL : 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-                        desc : '必游榜单'
-                    }, {
-                        id : '3',
-                        imgURL : 'http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png',
-                        desc : '踏青赏花'
-                    }, {
-                        id : '4',
-                        imgURL : 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                        desc : '一日游'
-                    }, {
-                        id : '5',
-                        imgURL : 'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-                        desc : '动植物园'
-                    }, {
-                        id : '6',
-                        imgURL : 'http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png',
-                        desc : '故宫'
-                    }, {
-                        id : '7',
-                        imgURL : 'http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png',
-                        desc : '主题乐园'
-                    }, {
-                        id : '8',
-                        imgURL : 'http://img1.qunarzz.com/piao/fusion/1804/ed/cf572be30fc32f02.png',
-                        desc : 'Q+精选'
-                    }, {
-                        id : '9',
-                        imgURL : 'http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png',
-                        desc : '演出'
-                    }, {
-                        id : '10',
-                        imgURL : 'http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png',
-                        desc : '自然风光'
-                    }
-                ]
+                swiperOption : {
+                    autoplay : false
+                }
             }
         },
         computed : {

@@ -3,7 +3,7 @@
         <div class="reconmend-title">热销推荐</div>
         <ul>
             <li class="reconmend-item border-bottom" v-for="item of recommendList" :key="item.id">
-                <img :src="item.url" class="item-img" alt="">
+                <img :src="item.imgUrl" class="item-img" alt="">
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
                     <p class="item-desc">{{item.desc}}</p>
@@ -16,25 +16,8 @@
 <script>
     export default {
         name : 'HomeRecommend',
-        data () {
-            return {
-                recommendList : [{
-                    id : '1',
-                    url : 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_150x150_06cb3e52.jpg',
-                    title : '故宫',
-                    desc : '故宫的描述很长很长很长很长很长很长很长很长很长很长'
-                }, {
-                    id : '2',
-                    url : 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_150x150_06cb3e52.jpg',
-                    title : '故宫',
-                    desc : '故宫的描述很长很长很长很长很长很长很长很长很长很长'
-                }, {
-                    id : '3',
-                    url : 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_150x150_06cb3e52.jpg',
-                    title : '故宫',
-                    desc : '故宫的描述很长很长很长很长很长很长很长很长很长很长'
-                }]
-            }
+        props : {
+            recommendList : Array
         }
     }
 </script>
