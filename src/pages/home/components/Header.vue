@@ -6,8 +6,10 @@
         <div class="header-input">
             <span class="iconfont icon-sousuo"></span> 输入城市/景点/游玩主题
         </div>
-        <div class="header-right">{{this.city}} <span class="iconfont icon-arrow-down-copy icon-arrow"></span>
-        </div>
+        <router-link to='/city'>
+            <div class="header-right">{{this.city}} <span class="iconfont icon-arrow-down-copy icon-arrow"></span>
+            </div>
+        </router-link>
     </div>
 </template>
 <script>
@@ -48,6 +50,7 @@
             width:1.24rem;
             float:right;
             text-align:center;
+            color:#fff;
             .icon-arrow{
                 margin-left:-.04rem;
                 font-size:.24rem;
