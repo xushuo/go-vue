@@ -7,7 +7,7 @@
             <span class="iconfont icon-sousuo"></span> 输入城市/景点/游玩主题
         </div>
         <router-link to='/city'>
-            <div class="header-right">{{this.city}} <span class="iconfont icon-arrow-down-copy icon-arrow"></span>
+            <div class="header-right">{{this.$store.state.city}} <span class="iconfont icon-arrow-down-copy icon-arrow"></span>
             </div>
         </router-link>
     </div>

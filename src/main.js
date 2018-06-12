@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import 'css/reset.css'
 import 'css/border.css'
 import 'css/iconfont.css'
@@ -18,16 +19,17 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
     el : '#app',
     router,
+    store,
     components : {App},
     template : '<App/>'
 })
 
 /*document.addEventListener('deviceready', function(){
-    new Vue({
-        el : '#app',
-        router,
-        components : {App},
-        template : '<App/>'
-    })
-    window.navigator.splashscreen.hide()
-}, false);*/
+ new Vue({
+ el : '#app',
+ router,
+ components : {App},
+ template : '<App/>'
+ })
+ window.navigator.splashscreen.hide()
+ }, false);*/

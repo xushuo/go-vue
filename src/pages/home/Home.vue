@@ -1,6 +1,6 @@
 <template>
     <div>
-        <home-hearder :city="city"></home-hearder>
+        <home-hearder></home-hearder>
         <home-swiper :swiperList="swiperList"></home-swiper>
         <home-icons :iconList="iconList"></home-icons>
         <home-recommend :recommendList="recommendList"></home-recommend>
@@ -26,7 +26,6 @@
         },
         data(){
             return {
-                "city" : "城市",
                 "swiperList" : [],
                 "iconList" : [],
                 "recommendList" : [],
