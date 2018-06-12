@@ -26,7 +26,7 @@
         },
         data(){
             return {
-                "city" : "",
+                "city" : "城市",
                 "swiperList" : [],
                 "iconList" : [],
                 "recommendList" : [],
@@ -42,7 +42,7 @@
                 if(res.ret && res.data){
                     const data = res.data
                     console.log(data)
-                    this.city = data.city
+                    //this.city = data.city
                     this.swiperList = data.swiperList
                     this.iconList = data.iconList
                     this.recommendList = data.recommendList

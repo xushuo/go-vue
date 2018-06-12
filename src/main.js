@@ -16,8 +16,20 @@ fastclick.attach(document.body) //取消点击延迟
 Vue.use(VueAwesomeSwiper)
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el : '#app',
+    router,
+    components : {App},
+    template : '<App/>'
 })
+
+/*
+document.addEventListener('deviceready', function(){
+    new Vue({
+        el : '#app',
+        router,
+        store,
+        template : '<App/>',
+        components : {App}
+    })
+    window.navigator.splashscreen.hide()
+}, false);*/
