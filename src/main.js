@@ -22,14 +22,12 @@ new Vue({
     template : '<App/>'
 })
 
-/*
-document.addEventListener('deviceready', function(){
+/*document.addEventListener('deviceready', function(){
     new Vue({
         el : '#app',
         router,
-        store,
-        template : '<App/>',
-        components : {App}
+        components : {App},
+        template : '<App/>'
     })
     window.navigator.splashscreen.hide()
 }, false);*/
