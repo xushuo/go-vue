@@ -1,11 +1,11 @@
 <template>
     <div>
         <div class="banner" @click="handleBannerClick">
-            <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1602/68/68aa05adb5315f9990.water.jpg_600x330_0dcecae1.jpg" alt="">
+            <img class="banner-img" :src="bannerImg" alt="">
             <div class="banner-info">
-                <div class="banner-title">北京海洋馆(AAAA景区)</div>
+                <div class="banner-title">{{sightName}}</div>
                 <div class="banner-number">
-                    <span class="iconfont icon-sousuo banner-icon"></span>30
+                    <span class="iconfont icon-sousuo banner-icon"></span>{{gallaryImgs.length}}
                 </div>
             </div>
         </div>
@@ -22,10 +22,14 @@
         components : {
             Gallary
         },
+        props : {
+            sightName : String,
+            bannerImg : String,
+            gallaryImgs : Array
+        },
         data(){
             return {
-                showGallary : false,
-                gallaryImgs : []
+                showGallary : false
             }
         },
         methods : {
@@ -36,18 +40,7 @@
                 this.showGallary = false
             }
         },
-        computed : {},
-        mounted(){
-            axios.get('/api/detail.json').then((res) =>{
-                res = res.data
-                if(res.ret && res.data){
-                    const data = res.data
-                    console.log(data)
-                    //this.city = data.city
-                    this.gallaryImgs = data.gallaryImgs
-                }
-            })
-        }
+        computed : {}
     }
 </script>
 <style scoped lang="scss" type="text/scss">
