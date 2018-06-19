@@ -11,10 +11,10 @@ module.exports = {
         assetsSubDirectory : 'static',
         assetsPublicPath : '/',
         proxyTable : {
-            '/api' : {
-                target : 'http://localhost:8080',
+            '/go-api' : {
+                target : 'http://localhost:4000',
                 pathRewrite : {
-                    '^/api' : '/static/mock'
+                    '^/go-api' : '/static/mock'
                 }
             }
         },

@@ -30,7 +30,7 @@
         },
         methods : {
             getCityInfo(){
-                axios.get('/api/city.json').then(this.handleGetCityInfo)
+                axios.get('/go-api/city.json').then(this.handleGetCityInfo)
             },
             handleGetCityInfo(res){
                 res = res.data
