@@ -27,7 +27,6 @@
         },
         data(){
             return {
-                gallaryImgs : [],
                 swiperOption : {
                     pagination : '.swiper-pagination',
                     paginationType : 'fraction',
