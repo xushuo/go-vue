@@ -9,7 +9,9 @@
                 </div>
             </div>
         </div>
-        <gallary :gallaryImgs="gallaryImgs" v-show="showGallary" @close="closeGallary"></gallary>
+        <fade>
+            <gallary :gallaryImgs="gallaryImgs" v-show="showGallary" @close="closeGallary"></gallary>
+        </fade>
     </div>
 
 </template>
@@ -17,10 +19,12 @@
     import axios from 'axios'
     import {mapState} from 'vuex'
     import Gallary from 'common/gallary/Gallary'
+    import Fade from 'common/fade/Fade'
     export default {
         name : 'Banner',
         components : {
-            Gallary
+            Gallary,
+            Fade
         },
         props : {
             sightName : String,
